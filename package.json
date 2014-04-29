@@ -1,0 +1,13 @@
+{
+  "name": "svanig",
+  "version": "0.0.0",
+  "description": "SVG animation previewer",
+  "main": "index.js",
+  "author": "Lucas Hudson <lucas@speak.geek.nz>",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "latest",
+    "grunt-node-webkit-builder": "~0.1.14",
+    "nodewebkit": "0.8.5"
+  }
+}

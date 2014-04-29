@@ -1,0 +1,18 @@
+{
+    "name": "Svanig",
+    "main": "index.html",
+    "version": "0.1",
+    "livereload": false,
+    "single-instance": false,
+    "compartir": true,
+    "chromium-args": "--ignore-certificate-errors --enable-threaded-compositing",
+    "window": {
+      "toolbar": true,
+	  "menubar": true,
+      "min_width": 750,
+      "min_height": 500,
+      "width": 750,
+      "height": 500,
+      "position": "center"
+    }
+}

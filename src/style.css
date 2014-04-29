@@ -1,0 +1,135 @@
+@import url(http://weloveiconfonts.com/api/?family=iconicstroke);
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	position:    relative;
+	width:       100%;
+	height:      99%;
+	font-family: sans-serif;
+	background:  #555;
+	color:       white;
+	margin:      0;
+	padding:     0;
+}
+
+
+button.disabled {
+    color: #888;
+    background: #666;
+    border-color: transparent;
+}
+
+/* fontawesome */
+[class*="iconicstroke-"]:before {
+	font-family: 'IconicStroke', sans-serif;
+}
+
+div#stage {
+	border: 3px dotted gainsboro;
+	min-height: 30%;
+	max-height: 68%;
+	overflow: auto;
+	position: relative;
+	margin: 1% 0;
+}
+#timeline {
+	height: 12%;
+	position: relative;
+	background: #666;
+	color: blue;
+}
+#controls {
+	height: 8%;
+	position: relative;
+	margin-left: 1em;
+}
+	#controls .file-controls {
+		display: inline-block;
+		margin-right: 2em;		
+	
+		float: right;
+		border-left: 2px groove #999;
+		padding-left: 2em;
+}
+	#controls .file-controls label {
+		font-weight: bold;
+	}
+	#play {
+		font-size: 30px;
+	}
+    #fps {
+        width: 5em;
+        margin-left: 0.5em;
+        line-height: 1em;
+        height: 1.9em;
+    }
+    
+ul#frames {
+	margin: 0 0 0 1em;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+	ul#frames li {
+		display: inline-block;
+		width: 2em;
+		height: 2em;
+		background: gainsboro;
+		border-right: 1px dotted black;
+		box-sizing: border-box;
+		text-align: center;
+		position: relative;
+	}
+		ul#frames li a {
+			display block;
+			text-decoration: none;
+			color: blue;
+			font-weight: bold;
+			width: 100%;
+			height: 100%;
+		
+			display: block;
+			/*padding: 5px;*/
+		}
+
+
+div#indicator {
+	background: transparent;
+	position: relative;
+	box-sizing: border-box;
+	border-top: 2px groove grey;
+	margin: 1em 1em 0 1em;
+}
+	div#indicator .thumb {
+		cursor: move;
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: -17px;
+		left: 0;
+		border: 12px solid blue;
+		border-top-width: 0;
+		border-left-color: transparent;
+		border-right-color: transparent;
+	}
+		div.thumb::after {
+			content: '';
+			display: block;
+			position: relative;
+			width: 12px;
+			height: 1.5em;
+			background: blue;
+			left: -6px;
+			top: 12px;
+		}
+		#indicator .thumb.drag {
+			cursor: ew-resize;
+			border-bottom-color: cornflowerblue;
+		}
+		#indicator .thumb.drag::after {
+			background-color: cornflowerblue;
+		}
