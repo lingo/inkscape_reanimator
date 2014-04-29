@@ -1,9 +1,14 @@
 {
-  "name": "svanig",
+  "name": "inkscape_reanimator",
   "version": "0.0.0",
-  "description": "SVG animation previewer",
+  "description": "SVG animation previewer for Inkscape SVG",
+  "bugs": "http://github.com/lingo/inkscape_reanimator/issues",
+  "repository": {
+	  "type" : "git",
+	  "url" : "http://github.com/lingo/inkscape_reanimator"
+  },
   "main": "index.js",
-  "author": "Lucas Hudson <lucas@speak.geek.nz>",
+  "author": "Lucas Hudson <github@speak.geek.nz>",
   "dependencies": {
     "grunt": "~0.4.1",
     "grunt-cli": "latest",
