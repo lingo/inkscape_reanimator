@@ -214,5 +214,5 @@
 				if (argv.length) {
 					loadFileFromDisk(argv[0]);
 				}
-                loadFileFromDisk('/home/lucas/gfx/cat_black_anim.svg');
+                //loadFileFromDisk('/home/lucas/gfx/cat_black_anim.svg');
             });
