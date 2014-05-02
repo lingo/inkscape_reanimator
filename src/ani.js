@@ -64,6 +64,10 @@
             }
 
             function loaded(file) {
+            	if (file) {
+            		var g = require('nw.gui');
+            		g.Window.get().title = file.name;
+            	}
                 svg = $('#stage').children()[0];
                 // if (!svg.length) {
                     // setTimeout(function() { loaded(); }, 500);
@@ -128,7 +132,7 @@
                     //console.log("Error", error);
                     // console.log("Loaded ", contents);
                     $('#stage').html(contents);
-                    loaded();
+                    loaded({name: fileName});
                 });                
             }
 
