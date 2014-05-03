@@ -1,10 +1,11 @@
             var svg                 = null,
                 frames              = null;
+            var bgLayers            = [];
             var curFrame, prevFrame = false;
             var paused              = false;
             var FPS                 = 12;
-            var tick = new Date();
-            var fileName = null;
+            var tick                = new Date();
+            var fileName            = null;
 
             function drawTimeline() {
                 $('#frames').empty();
@@ -80,7 +81,14 @@
                     var isLayer = x.getAttribute('inkscape:groupmode') === 'layer'
                     var isHidden = typeof x.style !== 'undefined' && typeof x.style.display !== 'undefined' && x.style.display === 'none';
                     if (isHidden) {
-                        console.log(x, 'is hidden', x.getAttribute('inkscape:label'), x.style.display);
+                        // console.log(x, 'is hidden', x.getAttribute('inkscape:label'), x.style.display);
+                    }
+                    if (x.getAttribute('nzgs:invisible')) {
+                        isHidden = true;
+                    }
+                    if (x.getAttribute('nzgs:background')) {
+                        bgLayers.push(x);
+                        isHidden = true;
                     }
                     return isLayer && !isHidden;
                 })
@@ -90,6 +98,9 @@
                         opacity: 1
                     });
                 })
+                $.each(bgLayers, function() {
+                    $(this).css({display: 'inline', opacity: 1, zIndex: -1});
+                });
                 frames.reverse();
                 drawTimeline();
                 curFrame = 0;
