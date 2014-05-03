@@ -26,7 +26,7 @@ make build
 0. Fix bugs
 0. Prettify interface
 0. ~~Allow for choosing constant background layer(s)~~ *partly implemented already*
-0. Possibly integrate with inkscape_onionskin plugins (custom tags in SVG to provide info to reanimator)
+0. ~~Possibly integrate with inkscape_onionskin plugins (custom tags in SVG to provide info to reanimator)~~ *partly implemented*
 0. Allow per-frame durations
 0. Allow frame duplication/editing
 0. Allow export to GIF (via ImageMagick probably)
